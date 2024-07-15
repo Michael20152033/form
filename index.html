@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма с валидацией</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="validationForm" class="form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Личная информация</legend>
+                <div class="form__group">
+                    <label for="name" class="form__label">Имя</label>
+                    <input type="text" id="name" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="phone" class="form__label">Телефон</label>
+                    <input type="tel" id="phone" class="form__input" required>
+                </div>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Информация о бизнесе</legend>
+                <div class="form__group">
+                    <label for="revenue" class="form__label">Ожидаемый оборот</label>
+                    <input type="number" step="0.01" id="revenue" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="industry" class="form__label">Выбор индустрии</label>
+                    <select id="industry" class="form__input form__select" required>
+                        <option value="">Выберите индустрию</option>
+                        <option value="1">Индустрия 1</option>
+                        <option value="2">Индустрия 2</option>
+                        <option value="3">Индустрия 3</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <input type="checkbox" id="agreement" class="form__checkbox" required>
+                    <label for="agreement" class="form__lab">Я принимаю правила сервиса</label>
+                </div>
+            </fieldset>
+            <div class="form__button-container">
+                <button type="submit" class="form__button">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+        <div id="successMessage" class="form__success-message">
+            Спасибо! Ваша заявка принята.
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

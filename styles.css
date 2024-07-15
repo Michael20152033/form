@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.form__fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.form__legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.form__group {
+    margin-bottom: 15px;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form__checkbox {
+    margin-right: 5px;
+}
+
+.form__select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right 10px center;
+    background-color: #fff;
+    background-size: 10px;
+}
+
+.form__button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__button {
+    padding: 10px 20px;
+    background-color: #5361f0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.form__button:hover {
+    background-color: #4051d0;
+}
+
+.form__success-message {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+    color: green;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+    .form__button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-height: 508px) {
+    .container {
+        height: 95%;
+        width: 95%;
+        margin: 0;
+    }
+    body {
+        padding: 0;
+    }
+}
